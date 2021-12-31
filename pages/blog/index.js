@@ -9,7 +9,7 @@ const Blog = () => {
     <Container style={{ maxWidth: 600 }}>
       <Grid container direction="column" alignItems="center">
         <Grid justifyContent="center" alignItems="center">
-          <img src="/second.png" alt="me" width={middle} height={middle} />
+          <Image src="/second.png" alt="me" width={middle} height={middle} />
         </Grid>
         <Grid container direction="row" justifyContent="space-between" alignItems="center">
           <Grid>
@@ -23,20 +23,5 @@ const Blog = () => {
     </Container>
   )
 }
-
-// export async function getStaticPaths() {
-//   return {
-//     paths: [],
-//     fallback: "blocking",
-//   };
-// }
-
-// export async function getStaticProps({ params }) {
-//   return {
-//     props: {
-//       data: 'data',
-//     }
-//   }
-// }
 
 export default Blog
