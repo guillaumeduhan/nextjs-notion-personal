@@ -1,5 +1,4 @@
 const { Client } = require('@notionhq/client');
-import { blockToString } from './helpers'
 
 const notion = new Client({ auth: process.env.NOTION_ACCESS_TOKEN });
 

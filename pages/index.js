@@ -1,8 +1,8 @@
 import Head from 'next/head'
-import { useState } from 'react'
-import { Alert, Button, Container, Grid, Snackbar, Stack } from '@mui/material';
+import { Button, Container, Grid, Stack } from '@mui/material';
 import { getMainPage } from '../services/api'
 import Image from 'next/image'
+import Link from 'next/link'
 import LinkedIn from '@mui/icons-material/LinkedIn';
 import Github from '@mui/icons-material/Github';
 
@@ -23,21 +23,19 @@ const Home = ({ blogData }) => {
         <Container className={'animate__animated animate__fadeIn'} style={{ maxWidth: 1000, marginTop: mMargin }}>
           <center>
             <Grid style={{ marginTop: lgMargin }}>
-              {/* <Image src="/second.png" alt="me" width={middle} height={middle} /> */}
               <Image src="/main.png" alt="me" width={full} height={full} />
-              {/* <Image src="/third.png" alt="me" width={middle} height={middle} /> */}
             </Grid>
-            {blogData && blogData.map((x) => {
+            {blogData && blogData.map((x, i) => {
               const Component = x.component
-              return <Component>{x.content}</Component>
+              return <Component key={i}>{x.content}</Component>
             })}
             <footer style={{ marginTop: xsMargin }}>
-              <a href="https://www.linkedin.com/in/guillaumeduhan/" target="_blank">
+              <Link href="https://www.linkedin.com/in/guillaumeduhan/">
                 <LinkedIn color={'primary'} style={{ margin: xsMargin }} />
-              </a>
-              <a href="https://github.com/guillaumeduhan" target="_blank">
+              </Link>
+              <Link href="https://github.com/guillaumeduhan">
                 <Github color={'primary'} style={{ margin: xsMargin }} />
-              </a>
+              </Link>
               <Stack justifyContent="center" alignItems="center" direction="column" spacing={2}>
                 <Button variant="contained" href="https://www.malt.fr/profile/guillaumed">Me recruter sur Malt</Button>
               </Stack>
