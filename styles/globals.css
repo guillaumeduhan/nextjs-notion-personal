@@ -19,7 +19,7 @@ h1, h2, h3, p {
 
 a, a:active, a:hover {
   color: #3f74aa!important;
-  text-decoration:underline;
+  text-decoration: none;
 }
 
 h1 {

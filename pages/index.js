@@ -6,7 +6,6 @@ import Link from 'next/link'
 
 const Home = ({ blogData }) => {
   const full = 425
-  const middle = 150
   const xsMargin = 16
   const mMargin = 32
   const lgMargin = 64
@@ -28,14 +27,22 @@ const Home = ({ blogData }) => {
               return <Component key={i}>{x.content}</Component>
             })}
             <footer style={{ marginTop: xsMargin }}>
-              <Link href="https://www.linkedin.com/in/guillaumeduhan/">
-                LinkedIn
-              </Link>
-              <Link href="https://github.com/guillaumeduhan">
-                Github
-              </Link>
               <Stack justifyContent="center" alignItems="center" direction="column" spacing={2}>
-                <Button variant="contained" href="https://www.malt.fr/profile/guillaumed">Me recruter sur Malt</Button>
+                <Button variant="contained" onClick={() => {
+                  window.open('https://www.malt.fr/profile/guillaumed', '_blank')
+                }}>Me recruter sur Malt</Button>
+              </Stack>
+              <Stack style={{ marginTop: xsMargin }} justifyContent="center" alignItems="center" direction="row" spacing={2}>
+                <div>
+                  <Link href="https://www.linkedin.com/in/guillaumeduhan/">
+                    <Image src="/linkedin.png" alt="me" width={mMargin} height={mMargin} />
+                  </Link>
+                </div>
+                <div>
+                  <Link href="https://github.com/guillaumeduhan">
+                    <Image src="/github.png" alt="me" width={mMargin} height={mMargin} />
+                  </Link>
+                </div>
               </Stack>
             </footer>
           </center>
