@@ -3,8 +3,6 @@ import { Button, Container, Grid, Stack } from '@mui/material';
 import { getMainPage } from '../services/api'
 import Image from 'next/image'
 import Link from 'next/link'
-import LinkedIn from '@mui/icons-material/LinkedIn';
-import Github from '@mui/icons-material/Github';
 
 const Home = ({ blogData }) => {
   const full = 425
@@ -31,10 +29,10 @@ const Home = ({ blogData }) => {
             })}
             <footer style={{ marginTop: xsMargin }}>
               <Link href="https://www.linkedin.com/in/guillaumeduhan/">
-                <LinkedIn color={'primary'} style={{ margin: xsMargin }} />
+                LinkedIn
               </Link>
               <Link href="https://github.com/guillaumeduhan">
-                <Github color={'primary'} style={{ margin: xsMargin }} />
+                Github
               </Link>
               <Stack justifyContent="center" alignItems="center" direction="column" spacing={2}>
                 <Button variant="contained" href="https://www.malt.fr/profile/guillaumed">Me recruter sur Malt</Button>
